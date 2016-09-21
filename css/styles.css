@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #7F7D78;
+}
+
+footer {
+    color: white;
+}
+
+footer h3 {
+    color: white;
+}
+
+.inset-text {
+    text-shadow: 3px 4px 5px 6px #000;
+}
+
+#contact-box {
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
