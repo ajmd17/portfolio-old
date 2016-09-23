@@ -1,6 +1,9 @@
 body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     overflow-x: hidden;
+    background-image: url("../img/background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,14 +27,19 @@ footer h3 {
 }
 
 .card {
-    width: 48%;
-    min-width: 100px;
     background: white;
-    position: relative;
-    float: left;
-    margin-right: 4%;
-    margin-bottom: 4%;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Cards show up side by side on non-mobile displays */
+@media (min-width: 768px) {
+    .card {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 4%;
+        position: relative;
+        float: left;
+    }
 }
 .card:nth-child(even) {
     margin-right: 0;
@@ -66,14 +74,7 @@ footer h3 {
     padding: 50px;
     overflow: hidden;
     margin: 0 auto;
-    /*box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);*/
-    background-color: /*rgba(128, 128, 128, 0.6);*/ white;
-}
-
-#portfolio {
-    background-image: url("../img/background.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: white;
 }
 
 .portfolio-item {
@@ -92,4 +93,38 @@ footer h3 {
 .project-link {
     margin-right: 5px !important;
     font-size: 1.0em !important;
+}
+
+#about-me {
+    /*background-color: white;
+
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-right:10px;
+    padding-top: 50px;*/
+}
+
+#about-me-inner {
+
+    max-width: 1000px;
+    padding: 50px;
+    padding-top: 110px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* adds more padding to the about me section because the nav bar is larger */
+@media (min-width: 768px) {
+    #about-me {
+        margin-top: 170px;
+    }
+
+    #about-me-inner {
+        padding-top: 90px;
+    }
+}
+
+#contact {
+    padding: 25px 0;
 }

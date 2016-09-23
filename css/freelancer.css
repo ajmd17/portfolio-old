@@ -25,7 +25,7 @@ header {
 }
 
 #portfolio {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -49,7 +49,7 @@ header .intro-text .skills {
 
 @media (min-width: 768px) {
   #portfolio {
-    padding-top: 250px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
   header .intro-text .name {
@@ -118,12 +118,9 @@ header .intro-text .skills {
 .navbar-custom .navbar-toggle:focus {
   background-color: white;
   border-color: white;
+  color: #BA525A;
 }
 
-
-.portfolio-description {
-  display: none;
-}
 
 .navbar-custom {
   padding: 8px 0;
@@ -145,8 +142,8 @@ header .intro-text .skills {
 
 @media (min-width: 768px) {
 
-  .portfolio-description {
-    display: block;
+  .navbar-custom #about-me {
+    display: block;;
   }
 
   .navbar-custom {
@@ -172,26 +169,21 @@ header .intro-text .skills {
   .navbar-custom.affix .navbar-subtext {
     display: none;
   }
+
+  .navbar-custom.affix #about-me {
+    display:none;
+  }
 }
-section {
-  padding: 35px 0;
-}
+
 section h2 {
   margin: 0;
   font-size: 3em;
   padding-bottom: 35px;
 }
 section.success {
-  background: #476E73;
+  background: rgba(71, 110, 115, 0.7);
+  opacity: 0.8;
   color: #D9D8D7;
-}
-@media (max-width: 767px) {
-  section {
-    padding: 75px 0;
-  }
-  section.first {
-    padding-top: 75px;
-  }
 }
 
 #portfolio * {
@@ -255,6 +247,7 @@ footer .footer-above {
   color: #D9D8D7;
 
   background-image: url("../img/background.png");
+  background-size: 100% auto;
 }
 footer .footer-col {
   margin-bottom: 50px;
@@ -262,6 +255,7 @@ footer .footer-col {
 footer .footer-below {
   padding: 25px 0;
   background-color: #3F5B6D;
+
 }
 .btn-outline {
   color: white;
