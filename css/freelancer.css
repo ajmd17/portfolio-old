@@ -10,7 +10,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #8C3E44;
+  color: #476E73;
   outline: none;
 }
 
@@ -24,7 +24,7 @@ header {
   color: white;
 }
 
-header .container {
+#portfolio {
   padding-top: 100px;
   padding-bottom: 50px;
 }
@@ -48,8 +48,8 @@ header .intro-text .skills {
 }
 
 @media (min-width: 768px) {
-  header .container {
-    padding-top: 200px;
+  #portfolio {
+    padding-top: 250px;
     padding-bottom: 100px;
   }
   header .intro-text .name {
@@ -61,7 +61,7 @@ header .intro-text .skills {
 }
 
 .navbar-custom {
-  transition: all 0.2s;
+  transition: all 0.3s;
   background: #8C3E44;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -117,15 +117,50 @@ header .intro-text .skills {
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
   background-color: white;
-  color: #8C3E44;
   border-color: white;
 }
+
+
+.portfolio-description {
+  display: none;
+}
+
+.navbar-custom {
+  padding: 8px 0;
+}
+
+.navbar-custom .navbar-subtext {
+  display: none;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.0em;
+}
+.navbar-custom.affix {
+  padding: 0px 0;
+}
+.navbar-custom.affix .navbar-brand {
+  font-size: 1.0em;
+}
+
 @media (min-width: 768px) {
-  .navbar-custom {
-    padding: 25px 0;
+
+  .portfolio-description {
+    display: block;
   }
+
+  .navbar-custom {
+    padding: 60px 0;
+  }
+
+  .navbar-custom .navbar-subtext {
+    font-size: 1em;
+    color: white;
+    display: block;
+  }
+
   .navbar-custom .navbar-brand {
-    font-size: 2em;
+    font-size: 3em;
   }
   .navbar-custom.affix {
     padding: 10px 0;
@@ -133,13 +168,18 @@ header .intro-text .skills {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
+
+  .navbar-custom.affix .navbar-subtext {
+    display: none;
+  }
 }
 section {
-  padding: 100px 0;
+  padding: 35px 0;
 }
 section h2 {
   margin: 0;
   font-size: 3em;
+  padding-bottom: 35px;
 }
 section.success {
   background: #476E73;
@@ -153,53 +193,9 @@ section.success {
     padding-top: 75px;
   }
 }
-#portfolio .portfolio-item {
-  margin: 0 0 15px;
-  right: 0;
-}
-#portfolio .portfolio-item .portfolio-link {
-  display: block;
-  position: relative;
-  max-width: 400px;
-  margin: 0 auto;
-}
-#portfolio .portfolio-item .portfolio-link .caption {
-  background: #8C3E44;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all ease 0.5s;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-}
-#portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  font-size: 20px;
-  text-align: center;
-  top: 50%;
-  margin-top: -12px;
-  color: #3F5B6D;
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-  margin-top: -12px;
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
-  margin: 0;
-}
+
 #portfolio * {
   z-index: 2;
-}
-@media (min-width: 767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px;
-  }
 }
 .floating-label-form-group {
   position: relative;
@@ -255,8 +251,10 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #59544A;
+  background-color: #8C3E44;
   color: #D9D8D7;
+
+  background-image: url("../img/background.png");
 }
 footer .footer-col {
   margin-bottom: 50px;

@@ -23,6 +23,73 @@ footer h3 {
     text-shadow: 3px 4px 5px 6px #000;
 }
 
+.card {
+    width: 48%;
+    min-width: 100px;
+    background: white;
+    position: relative;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.card:nth-child(even) {
+    margin-right: 0;
+}
+
+.come-in {
+    transform: translateY(100px) rotate(20deg);
+    opacity: 0;
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    animation-duration: 0.6s;
+}
+
+@keyframes come-in {
+    to {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
 #contact-box {
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+    /*box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);*/
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#cards-panel-outer {
+    max-width: 1000px;
+    padding: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    /*box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);*/
+    background-color: /*rgba(128, 128, 128, 0.6);*/ white;
+}
+
+#portfolio {
+    background-image: url("../img/background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.portfolio-item {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.portfolio-description {
+    font-size: 1.2em !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.project-link {
+    margin-right: 5px !important;
+    font-size: 1.0em !important;
 }
